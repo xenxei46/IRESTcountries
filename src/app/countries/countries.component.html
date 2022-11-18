@@ -1,0 +1,42 @@
+<div class="all-countries">
+    <!-- header -->
+    <div class="header">
+        <nav>
+            <h1>Where in the world?</h1>
+            <div>Dark mode</div>  
+        </nav>
+    </div>
+    <pre></pre>
+    <!-- content-area -->
+    <div class="content">
+        <!-- search and filter -->
+        <div class="sort-methods">
+            <div class="search">
+                <input type="search" placeholder="search"> 
+            </div>
+            <div class="filter">
+                <select name="cars" id="cars">
+                    Filter  by Region
+                    <option value="Africa">Africa</option>
+                    <option value="Germany">Germany</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                </select>
+            </div>    
+        </div>
+        <!-- Countries -->
+        <div class="country-grid">
+            <mat-card class="card" *ngFor="let country of country">
+                <img [src]="country.img" alt="img" width="100%"> 
+                <mat-card-content class="content">
+                    <span class="title">
+                        <h4>{{country.name}}</h4>
+                    </span>
+                    <p>population:{{country.population}}</p>
+                    <p>Region:{{country.region}}</p>
+                    <p>Capital:{{country.population}}</p>  
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
